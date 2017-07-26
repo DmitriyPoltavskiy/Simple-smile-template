@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test smiles</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/js/emojify.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form onsubmit="sendMessage(event)" class="messageForm" id="messageForm">
+                    <div type="text" id="messageInput" class="messageInput" contentEditable=true></div>
+                    <button id="submitButton" class="btn btn-primary">Send</button>
+
+                    <div class="smiles-controll-block">
+                        <button class="btn btn-default smileButton" type="button" id="smileButton">
+                            Smiles
+                        </button>
+                        <div class="smileContainer" aria-labelledby="dropdownMenu1">
+                            <div data-smile-item="smile" onclick="choiceSmile(event, this);" class="smileItem">:smile:</div>
+                            <div data-smile-item="laughing" onclick="choiceSmile(event, this);" class="smileItem">:laughing:</div>
+                            <div data-smile-item="blush" onclick="choiceSmile(event, this);" class="smileItem">:blush:</div>
+                            <div data-smile-item="smiley" onclick="choiceSmile(event, this);" class="smileItem">:smiley:</div>
+                            <div data-smile-item="relaxed" onclick="choiceSmile(event, this);" class="smileItem">:relaxed:</div>
+                            <div data-smile-item="smirk" onclick="choiceSmile(event, this);" class="smileItem">:smirk:</div>
+                            <div data-smile-item="heart_eyes" onclick="choiceSmile(event, this);" class="smileItem">:heart_eyes:</div>
+                            <div data-smile-item="kissing_heart" onclick="choiceSmile(event, this);" class="smileItem">:kissing_heart:</div>
+                            <div data-smile-item="kissing_closed_eyes" onclick="choiceSmile(event, this);" class="smileItem">:kissing_closed_eyes:</div>
+                            <div data-smile-item="flushed" onclick="choiceSmile(event, this);" class="smileItem">:flushed:</div>
+                            <div data-smile-item="relieved" onclick="choiceSmile(event, this);" class="smileItem">:relieved:</div>
+                            <div data-smile-item="satisfied" onclick="choiceSmile(event, this);" class="smileItem">:satisfied:</div>
+                            <div data-smile-item="grin" onclick="choiceSmile(event, this);" class="smileItem">:grin:</div>
+                            <div data-smile-item="wink" onclick="choiceSmile(event, this);" class="smileItem">:wink:</div>
+                            <div data-smile-item="stuck_out_tongue_winking_eye" onclick="choiceSmile(event, this);" class="smileItem">:stuck_out_tongue_winking_eye:</div>
+                            <div data-smile-item="stuck_out_tongue_closed_eyes" onclick="choiceSmile(event, this);" class="smileItem">:stuck_out_tongue_closed_eyes:</div>
+                            <div data-smile-item="grinning" onclick="choiceSmile(event, this);" class="smileItem">:grinning:</div>
+                            <div data-smile-item="kissing" onclick="choiceSmile(event, this);" class="smileItem">:kissing:</div>
+                            <div data-smile-item="kissing_smiling_eyes" onclick="choiceSmile(event, this);" class="smileItem">:kissing_smiling_eyes:</div>
+                            <div data-smile-item="stuck_out_tongue" onclick="choiceSmile(event, this);" class="smileItem">:stuck_out_tongue:</div>
+                            <div data-smile-item="sleeping" onclick="choiceSmile(event, this);" class="smileItem">:sleeping:</div>
+                            <div data-smile-item="worried" onclick="choiceSmile(event, this);" class="smileItem">:worried:</div>
+                            <div data-smile-item="frowning" onclick="choiceSmile(event, this);" class="smileItem">:frowning:</div>
+                            <div data-smile-item="anguished" onclick="choiceSmile(event, this);" class="smileItem">:anguished:</div>
+                            <div data-smile-item="open_mouth" onclick="choiceSmile(event, this);" class="smileItem">:open_mouth:</div>
+                            <div data-smile-item="grimacing" onclick="choiceSmile(event, this);" class="smileItem">:grimacing:</div>
+                            <div data-smile-item="confused" onclick="choiceSmile(event, this);" class="smileItem">:confused:</div>
+                            <div data-smile-item="hushed" onclick="choiceSmile(event, this);" class="smileItem">:hushed:</div>
+                            <div data-smile-item="expressionless" onclick="choiceSmile(event, this);" class="smileItem">:expressionless:</div>
+                            <div data-smile-item="unamused" onclick="choiceSmile(event, this);" class="smileItem">:unamused:</div>
+                            <div data-smile-item="sweat_smile" onclick="choiceSmile(event, this);" class="smileItem">:sweat_smile:</div>
+                            <div data-smile-item="sweat" onclick="choiceSmile(event, this);" class="smileItem">:sweat:</div>
+                            <div data-smile-item="disappointed_relieved" onclick="choiceSmile(event, this);" class="smileItem">:disappointed_relieved:</div>
+                            <div data-smile-item="weary" onclick="choiceSmile(event, this);" class="smileItem">:weary:</div>
+                            <div data-smile-item="pensive" onclick="choiceSmile(event, this);" class="smileItem">:pensive:</div>
+                            <div data-smile-item="disappointed" onclick="choiceSmile(event, this);" class="smileItem">:disappointed:</div>
+                            <div data-smile-item="confounded" onclick="choiceSmile(event, this);" class="smileItem">:confounded:</div>
+                            <div data-smile-item="fearful" onclick="choiceSmile(event, this);" class="smileItem">:fearful:</div>
+                            <div data-smile-item="cold_sweat" onclick="choiceSmile(event, this);" class="smileItem">:cold_sweat:</div>
+                            <div data-smile-item="persevere" onclick="choiceSmile(event, this);" class="smileItem">:persevere:</div>
+                            <div data-smile-item="cry" onclick="choiceSmile(event, this);" class="smileItem">:cry:</div>
+                            <div data-smile-item="sob" onclick="choiceSmile(event, this);" class="smileItem">:sob:</div>
+                            <div data-smile-item="joy" onclick="choiceSmile(event, this);" class="smileItem">:joy:</div>
+                            <div data-smile-item="astonished" onclick="choiceSmile(event, this);" class="smileItem">:astonished:</div>
+                            <div data-smile-item="scream" onclick="choiceSmile(event, this);" class="smileItem">:scream:</div>
+                            <div data-smile-item="neckbeard" onclick="choiceSmile(event, this);" class="smileItem">:neckbeard:</div>
+                            <div data-smile-item="tired_face" onclick="choiceSmile(event, this);" class="smileItem">:tired_face:</div>
+                            <div data-smile-item="angry" onclick="choiceSmile(event, this);" class="smileItem">:angry:</div>
+                            <div data-smile-item="rage" onclick="choiceSmile(event, this);" class="smileItem">:rage:</div>
+                            <div data-smile-item="triumph" onclick="choiceSmile(event, this);" class="smileItem">:triumph:</div>
+                            <div data-smile-item="sleepy" onclick="choiceSmile(event, this);" class="smileItem">:sleepy:</div>
+                            <div data-smile-item="yum" onclick="choiceSmile(event, this);" class="smileItem">:yum:</div>
+                            <div data-smile-item="mask" onclick="choiceSmile(event, this);" class="smileItem">:mask:</div>
+                            <div data-smile-item="sunglasses" onclick="choiceSmile(event, this);" class="smileItem">:sunglasses:</div>
+                            <div data-smile-item="dizzy_face" onclick="choiceSmile(event, this);" class="smileItem">:dizzy_face:</div>
+                            <div data-smile-item="imp" onclick="choiceSmile(event, this);" class="smileItem">:imp:</div>
+                            <div data-smile-item="smiling_imp" onclick="choiceSmile(event, this);" class="smileItem">:smiling_imp:</div>
+                            <div data-smile-item="neutral_face" onclick="choiceSmile(event, this);" class="smileItem">:neutral_face:</div>
+                            <div data-smile-item="no_mouth" onclick="choiceSmile(event, this);" class="smileItem">:no_mouth:</div>
+                            <div data-smile-item="innocent" onclick="choiceSmile(event, this);" class="smileItem">:innocent:</div>
+                            <div data-smile-item="alien" onclick="choiceSmile(event, this);" class="smileItem">:alien:</div>
+                            <div data-smile-item="yellow_heart" onclick="choiceSmile(event, this);" class="smileItem">:yellow_heart:</div>
+                            <div data-smile-item="blue_heart" onclick="choiceSmile(event, this);" class="smileItem">:blue_heart:</div>
+                            <div data-smile-item="purple_heart" onclick="choiceSmile(event, this);" class="smileItem">:purple_heart:</div>
+                            <div data-smile-item="heart" onclick="choiceSmile(event, this);" class="smileItem">:heart:</div>
+                            <div data-smile-item="green_heart" onclick="choiceSmile(event, this);" class="smileItem">:green_heart:</div>
+                            <div data-smile-item="broken_heart" onclick="choiceSmile(event, this);" class="smileItem">:broken_heart:</div>
+                            <div data-smile-item="heartbeat" onclick="choiceSmile(event, this);" class="smileItem">:heartbeat:</div>
+                            <div data-smile-item="heartpulse" onclick="choiceSmile(event, this);" class="smileItem">:heartpulse:</div>
+                            <div data-smile-item="two_hearts" onclick="choiceSmile(event, this);" class="smileItem">:two_hearts:</div>
+                            <div data-smile-item="revolving_hearts" onclick="choiceSmile(event, this);" class="smileItem">:revolving_hearts:</div>
+                            <div data-smile-item="cupid" onclick="choiceSmile(event, this);" class="smileItem">:cupid:</div>
+                            <div data-smile-item="sparkling_heart" onclick="choiceSmile(event, this);" class="smileItem">:sparkling_heart:</div>
+                            <div data-smile-item="sparkles" onclick="choiceSmile(event, this);" class="smileItem">:sparkles:</div>
+                            <div data-smile-item="star" onclick="choiceSmile(event, this);" class="smileItem">:star:</div>
+                            <div data-smile-item="star2" onclick="choiceSmile(event, this);" class="smileItem">:star2:</div>
+                            <div data-smile-item="dizzy" onclick="choiceSmile(event, this);" class="smileItem">:dizzy:</div>
+                            <div data-smile-item="boom" onclick="choiceSmile(event, this);" class="smileItem">:boom:</div>
+                            <div data-smile-item="collision" onclick="choiceSmile(event, this);" class="smileItem">:collision:</div>
+                            <div data-smile-item="anger" onclick="choiceSmile(event, this);" class="smileItem">:anger:</div>
+                            <div data-smile-item="exclamation" onclick="choiceSmile(event, this);" class="smileItem">:exclamation:</div>
+                            <div data-smile-item="question" onclick="choiceSmile(event, this);" class="smileItem">:question:</div>
+                            <div data-smile-item="grey_exclamation" onclick="choiceSmile(event, this);" class="smileItem">:grey_exclamation:</div>
+                            <div data-smile-item="grey_question" onclick="choiceSmile(event, this);" class="smileItem">:grey_question:</div>
+                            <div data-smile-item="zzz" onclick="choiceSmile(event, this);" class="smileItem">:zzz:</div>
+                            <div data-smile-item="dash" onclick="choiceSmile(event, this);" class="smileItem">:dash:</div>
+                            <div data-smile-item="sweat_drops" onclick="choiceSmile(event, this);" class="smileItem">:sweat_drops:</div>
+                            <div data-smile-item="notes" onclick="choiceSmile(event, this);" class="smileItem">:notes:</div>
+                            <div data-smile-item="musical_note" onclick="choiceSmile(event, this);" class="smileItem">:musical_note:</div>
+                            <div data-smile-item="fire" onclick="choiceSmile(event, this);" class="smileItem">:fire:</div>
+                            <div data-smile-item="hankey" onclick="choiceSmile(event, this);" class="smileItem">:hankey:</div>
+                            <div data-smile-item="poop" onclick="choiceSmile(event, this);" class="smileItem">:poop:</div>
+                            <div data-smile-item="shit" onclick="choiceSmile(event, this);" class="smileItem">:shit:</div>
+                            <div data-smile-item="plus1" onclick="choiceSmile(event, this);" class="smileItem">:plus1:</div>
+                            <div data-smile-item="thumbsup" onclick="choiceSmile(event, this);" class="smileItem">:thumbsup:</div>
+                            <div data-smile-item="ok_hand" onclick="choiceSmile(event, this);" class="smileItem">:ok_hand:</div>
+                            <div data-smile-item="punch" onclick="choiceSmile(event, this);" class="smileItem">:punch:</div>
+                            <div data-smile-item="facepunch" onclick="choiceSmile(event, this);" class="smileItem">:facepunch:</div>
+                            <div data-smile-item="fist" onclick="choiceSmile(event, this);" class="smileItem">:fist:</div>
+                            <div data-smile-item="wave" onclick="choiceSmile(event, this);" class="smileItem">:wave:</div>
+                            <div data-smile-item="hand" onclick="choiceSmile(event, this);" class="smileItem">:hand:</div>
+                            <div data-smile-item="raised_hand" onclick="choiceSmile(event, this);" class="smileItem">:raised_hand:</div>
+                            <div data-smile-item="open_hands" onclick="choiceSmile(event, this);" class="smileItem">:open_hands:</div>
+                            <div data-smile-item="point_up" onclick="choiceSmile(event, this);" class="smileItem">:point_up:</div>
+                            <div data-smile-item="point_down" onclick="choiceSmile(event, this);" class="smileItem">:point_down:</div>
+                            <div data-smile-item="point_left" onclick="choiceSmile(event, this);" class="smileItem">:point_left:</div>
+                            <div data-smile-item="point_right" onclick="choiceSmile(event, this);" class="smileItem">:point_right:</div>
+                            <div data-smile-item="raised_hands" onclick="choiceSmile(event, this);" class="smileItem">:raised_hands:</div>
+                            <div data-smile-item="pray" onclick="choiceSmile(event, this);" class="smileItem">:pray:</div>
+                            <div data-smile-item="point_up_2" onclick="choiceSmile(event, this);" class="smileItem">:point_up_2:</div>
+                            <div data-smile-item="clap" onclick="choiceSmile(event, this);" class="smileItem">:clap:</div>
+                            <div data-smile-item="muscle" onclick="choiceSmile(event, this);" class="smileItem">:muscle:</div>
+                            <div data-smile-item="metal" onclick="choiceSmile(event, this);" class="smileItem">:metal:</div>
+                            <div data-smile-item="fu" onclick="choiceSmile(event, this);" class="smileItem">:fu:</div>
+                            <div data-smile-item="runner" onclick="choiceSmile(event, this);" class="smileItem">:runner:</div>
+                            <div data-smile-item="running" onclick="choiceSmile(event, this);" class="smileItem">:running:</div>
+                            <div data-smile-item="couple" onclick="choiceSmile(event, this);" class="smileItem">:couple:</div>
+                            <div data-smile-item="family" onclick="choiceSmile(event, this);" class="smileItem">:family:</div>
+                            <div data-smile-item="two_men_holding_hands" onclick="choiceSmile(event, this);" class="smileItem">:two_men_holding_hands:</div>
+                            <div data-smile-item="two_women_holding_hands" onclick="choiceSmile(event, this);" class="smileItem">:two_women_holding_hands:</div>
+                            <div data-smile-item="dancer" onclick="choiceSmile(event, this);" class="smileItem">:dancer:</div>
+                            <div data-smile-item="dancers" onclick="choiceSmile(event, this);" class="smileItem">:dancers:</div>
+                            <div data-smile-item="ok_woman" onclick="choiceSmile(event, this);" class="smileItem">:ok_woman:</div>
+                            <div data-smile-item="no_good" onclick="choiceSmile(event, this);" class="smileItem">:no_good:</div>
+                            <div data-smile-item="information_desk_person" onclick="choiceSmile(event, this);" class="smileItem">:information_desk_person:</div>
+                            <div data-smile-item="raising_hand" onclick="choiceSmile(event, this);" class="smileItem">:raising_hand:</div>
+                            <div data-smile-item="bride_with_veil" onclick="choiceSmile(event, this);" class="smileItem">:bride_with_veil:</div>
+                            <div data-smile-item="person_with_pouting_face" onclick="choiceSmile(event, this);" class="smileItem">:person_with_pouting_face:</div>
+                            <div data-smile-item="person_frowning" onclick="choiceSmile(event, this);" class="smileItem">:person_frowning:</div>
+                            <div data-smile-item="bow" onclick="choiceSmile(event, this);" class="smileItem">:bow:</div>
+                            <div data-smile-item="couplekiss" onclick="choiceSmile(event, this);" class="smileItem">:couplekiss:</div>
+                            <div data-smile-item="couple_with_heart" onclick="choiceSmile(event, this);" class="smileItem">:couple_with_heart:</div>
+                            <div data-smile-item="massage" onclick="choiceSmile(event, this);" class="smileItem">:massage:</div>
+                            <div data-smile-item="haircut" onclick="choiceSmile(event, this);" class="smileItem">:haircut:</div>
+                            <div data-smile-item="nail_care" onclick="choiceSmile(event, this);" class="smileItem">:nail_care:</div>
+                            <div data-smile-item="boy" onclick="choiceSmile(event, this);" class="smileItem">:boy:</div>
+                            <div data-smile-item="girl" onclick="choiceSmile(event, this);" class="smileItem">:girl:</div>
+                            <div data-smile-item="woman" onclick="choiceSmile(event, this);" class="smileItem">:woman:</div>
+                            <div data-smile-item="man" onclick="choiceSmile(event, this);" class="smileItem">:man:</div>
+                            <div data-smile-item="baby" onclick="choiceSmile(event, this);" class="smileItem">:baby:</div>
+                            <div data-smile-item="older_woman" onclick="choiceSmile(event, this);" class="smileItem">:older_woman:</div>
+                            <div data-smile-item="older_man" onclick="choiceSmile(event, this);" class="smileItem">:older_man:</div>
+                            <div data-smile-item="person_with_blond_hair" onclick="choiceSmile(event, this);" class="smileItem">:person_with_blond_hair:</div>
+                            <div data-smile-item="man_with_gua_pi_mao" onclick="choiceSmile(event, this);" class="smileItem">:man_with_gua_pi_mao:</div>
+                            <div data-smile-item="man_with_turban" onclick="choiceSmile(event, this);" class="smileItem">:man_with_turban:</div>
+                            <div data-smile-item="construction_worker" onclick="choiceSmile(event, this);" class="smileItem">:construction_worker:</div>
+                            <div data-smile-item="cop" onclick="choiceSmile(event, this);" class="smileItem">:cop:</div>
+                            <div data-smile-item="angel" onclick="choiceSmile(event, this);" class="smileItem">:angel:</div>
+                            <div data-smile-item="princess" onclick="choiceSmile(event, this);" class="smileItem">:princess:</div>
+                            <div data-smile-item="smiley_cat" onclick="choiceSmile(event, this);" class="smileItem">:smiley_cat:</div>
+                            <div data-smile-item="smile_cat" onclick="choiceSmile(event, this);" class="smileItem">:smile_cat:</div>
+                            <div data-smile-item="heart_eyes_cat" onclick="choiceSmile(event, this);" class="smileItem">:heart_eyes_cat:</div>
+                            <div data-smile-item="kissing_cat" onclick="choiceSmile(event, this);" class="smileItem">:kissing_cat:</div>
+                            <div data-smile-item="smirk_cat" onclick="choiceSmile(event, this);" class="smileItem">:smirk_cat:</div>
+                            <div data-smile-item="scream_cat" onclick="choiceSmile(event, this);" class="smileItem">:scream_cat:</div>
+                            <div data-smile-item="crying_cat_face" onclick="choiceSmile(event, this);" class="smileItem">:crying_cat_face:</div>
+                            <div data-smile-item="joy_cat" onclick="choiceSmile(event, this);" class="smileItem">:joy_cat:</div>
+                            <div data-smile-item="pouting_cat" onclick="choiceSmile(event, this);" class="smileItem">:pouting_cat:</div>
+                            <div data-smile-item="japanese_ogre" onclick="choiceSmile(event, this);" class="smileItem">:japanese_ogre:</div>
+                            <div data-smile-item="japanese_goblin" onclick="choiceSmile(event, this);" class="smileItem">:japanese_goblin:</div>
+                            <div data-smile-item="see_no_evil" onclick="choiceSmile(event, this);" class="smileItem">:see_no_evil:</div>
+                            <div data-smile-item="hear_no_evil" onclick="choiceSmile(event, this);" class="smileItem">:hear_no_evil:</div>
+                            <div data-smile-item="speak_no_evil" onclick="choiceSmile(event, this);" class="smileItem">:speak_no_evil:</div>
+                            <div data-smile-item="guardsman" onclick="choiceSmile(event, this);" class="smileItem">:guardsman:</div>
+                            <div data-smile-item="skull" onclick="choiceSmile(event, this);" class="smileItem">:skull:</div>
+                            <div data-smile-item="feet" onclick="choiceSmile(event, this);" class="smileItem">:feet:</div>
+                            <div data-smile-item="lips" onclick="choiceSmile(event, this);" class="smileItem">:lips:</div>
+                            <div data-smile-item="kiss" onclick="choiceSmile(event, this);" class="smileItem">:kiss:</div>
+                            <div data-smile-item="droplet" onclick="choiceSmile(event, this);" class="smileItem">:droplet:</div>
+                            <div data-smile-item="ear" onclick="choiceSmile(event, this);" class="smileItem">:ear:</div>
+                            <div data-smile-item="eyes" onclick="choiceSmile(event, this);" class="smileItem">:eyes:</div>
+                            <div data-smile-item="nose" onclick="choiceSmile(event, this);" class="smileItem">:nose:</div>
+                            <div data-smile-item="tongue" onclick="choiceSmile(event, this);" class="smileItem">:tongue:</div>
+                            <div data-smile-item="love_letter" onclick="choiceSmile(event, this);" class="smileItem">:love_letter:</div>
+                            <div data-smile-item="bust_in_silhouette" onclick="choiceSmile(event, this);" class="smileItem">:bust_in_silhouette:</div>
+                            <div data-smile-item="busts_in_silhouette" onclick="choiceSmile(event, this);" class="smileItem">:busts_in_silhouette:</div>
+                            <div data-smile-item="speech_balloon" onclick="choiceSmile(event, this);" class="smileItem">:speech_balloon:</div>
+                            <div data-smile-item="thought_balloon" onclick="choiceSmile(event, this);" class="smileItem">:thought_balloon:</div>
+                            <div data-smile-item="feelsgood" onclick="choiceSmile(event, this);" class="smileItem">:feelsgood:</div>
+                            <div data-smile-item="finnadie" onclick="choiceSmile(event, this);" class="smileItem">:finnadie:</div>
+                            <div data-smile-item="goberserk" onclick="choiceSmile(event, this);" class="smileItem">:goberserk:</div>
+                            <div data-smile-item="godmode" onclick="choiceSmile(event, this);" class="smileItem">:godmode:</div>
+                            <div data-smile-item="hurtrealbad" onclick="choiceSmile(event, this);" class="smileItem">:hurtrealbad:</div>
+                            <div data-smile-item="rage1" onclick="choiceSmile(event, this);" class="smileItem">:rage1:</div>
+                            <div data-smile-item="rage2" onclick="choiceSmile(event, this);" class="smileItem">:rage2:</div>
+                            <div data-smile-item="rage3" onclick="choiceSmile(event, this);" class="smileItem">:rage3:</div>
+                            <div data-smile-item="rage4" onclick="choiceSmile(event, this);" class="smileItem">:rage4:</div>
+                            <div data-smile-item="suspect" onclick="choiceSmile(event, this);" class="smileItem">:suspect:</div>
+                            <div data-smile-item="trollface" onclick="choiceSmile(event, this);" class="smileItem">:trollface:</div>
+                        </div>
+                    </div>
+                </form>
+                <div id="messageContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

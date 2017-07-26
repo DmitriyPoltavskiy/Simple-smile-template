@@ -1,0 +1,82 @@
+body {
+    padding-top: 40px;
+}
+.emoji {
+    width:1.5em;
+    height:1.5em;
+    display:inline-block;
+    background-size:contain;
+}
+.messageForm {
+    margin-bottom: 15px;
+}
+.messageInput {
+    border: 1px solid #aaa;
+    height: 60px;
+    overflow-x: hidden; 
+    overflow-y: visible; 
+    /* margin: 5px; */
+    margin-bottom: 5px;
+    padding: 2px;
+    border-radius: 5px;
+    cursor: text;
+}
+.smiles-controll-block {
+    position: relative;
+    display: inline-block;
+}
+.smiles-controll-block:hover .smileContainer {
+    visibility: visible;
+    opacity: 1;
+}
+.smiles-controll-block::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -7px;
+        height: 7px;
+        width: 100px;
+        /* background-color: red; */
+        transform: translateX(-50%);
+}
+.smileContainer {
+    opacity: 0;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    visibility: hidden;
+    overflow-x: hidden; 
+    overflow-y: visible; 
+    width: 238px;
+    height: 200px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    text-align: center;
+    cursor: default;
+
+    transition: all .1s;
+}
+.smileContainer::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    transform: translateX(-50%);
+    border-bottom: 8px solid #aaa;
+}
+.smileItem {
+    display: inline-block;
+    padding: 3px;
+    border-radius: 50%;
+    transition: all .18s;
+}
+.smileItem:hover {
+    background-color: #80DEEA;
+}
